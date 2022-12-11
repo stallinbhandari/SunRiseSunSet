@@ -4,17 +4,21 @@ Created on Wed Dec  7 12:32:28 2022
 
 @author: 97798
 """
-import pandas as pd
+#importing pandas library
 
+import pandas as pd
+#importing data with columns separated by spaces \s and tabs \t in any sequence as space or tab or space+tab or tab+space
 dat_rise= pd.read_csv('sun-rise-pac_2023.txt', sep = "\s+|\t+|\s+\t+|\t+\s+")
 dat_set= pd.read_csv('sun-set-pac_2023.txt', sep = "\s+|\t+|\s+\t+|\t+\s+")
 #reading station files
 file= open('stations.txt', 'r')
 f1=file.readlines()
+#initializing dictionary for recording station name and coordinates
 stn={}
 for lines in f1:
     rec=lines.strip().split()
     #print (rec[6])
+    #appending records to dictionary as dictionaryname[keys]=[value1,value2]
     stn[rec[0]]=[int(rec[1])+int(rec[2])/60+int(rec[3])/3600, int(rec[4])+int(rec[5])/60+int(rec[6])/3600]
 
 #Interpolating upper and lower latitudes
