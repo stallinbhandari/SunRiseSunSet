@@ -15,6 +15,7 @@ file= open('stations.txt', 'r')
 f1=file.readlines()
 #initializing dictionary for recording station name and coordinates
 stn={}
+#iterating through the coordinate files
 for lines in f1:
     rec=lines.strip().split()
     #print (rec[6])
@@ -25,6 +26,7 @@ for lines in f1:
 phi_20=20
 phi_30=30
 
+#defining a function for interpolating and calculating sunrise or sunset time
 def sriset_time(dat,phi,lamb,event):
     
     #assigning variables for each column for operating independently
