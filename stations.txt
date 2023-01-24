@@ -1,0 +1,5 @@
+Kathmandu	27	41	46	85	21	38	
+Biratnagar	26	29	03	87	15	52
+Pokhara		28	11	57	83	58	43
+Bhairhawa	27	30	26	83	25	05
+Nepalgunj	28	06	06	81	39	59
